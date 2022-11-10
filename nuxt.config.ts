@@ -1,7 +1,7 @@
 import { defineNuxtConfig } from "nuxt";
 import { resolve } from "path";
 
-const VUE_SASS_PATH = resolve(process.cwd());
+const VUE_SASS_PATH = resolve(process.cwd()).replace(/\\/g, "/");
 
 const VUE_SASS_AUTO_IMPORT = `@import "${VUE_SASS_PATH}/styles/variables";
 @import "${VUE_SASS_PATH}/styles/functions";
